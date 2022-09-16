@@ -4,29 +4,29 @@ void takeInput()
 {
 	int i,j;
 
-	printf("Enter the number of villages: ");
+	printf("Enter the number of cities: ");
 	scanf("%d",&n);
 
 	printf("\nEnter the Cost Matrix\n");
 
 	for(i=0;i < n;i++)
 	{
-		printf("\nEnter Elements of Row: %d\n",i+1);
+		printf("\nEnter The cost to travel from city %d to others\n",i+1);
 
 		for( j=0;j < n;j++)
-			scanf("%d",&ary[i][j]);
+			scanf("%d",&array[i][j]);
 
 		completed[i]=0;
 	}
 
-	printf("\n\nThe cost list is:");
+	printf("\n\nThe cost matrix is:");
 
 	for( i=0;i < n;i++)
 	{
 		printf("\n");
 
 		for(j=0;j < n;j++)
-			printf("\t%d",ary[i][j]);
+			printf("\t%d",array[i][j]);
 	}
 }
 
