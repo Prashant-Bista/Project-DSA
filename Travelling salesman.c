@@ -1,3 +1,5 @@
+#include<stdio.h>
+int array[10][10],completed[10],n,cost=0;
 void takeInput()
 {
 	int i,j;
@@ -27,3 +29,4 @@ void takeInput()
 			printf("\t%d",ary[i][j]);
 	}
 }
+
