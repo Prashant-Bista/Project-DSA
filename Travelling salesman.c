@@ -29,4 +29,20 @@ void takeInput()
 			printf("\t%d",array[i][j]);
 	}
 }
+void mincost(int city)
+{
+int i,ncity;
+ 
+completed[city]=1;
+ 
+printf("%d--->",city+1);
+ncity=least(city);
+ 
+if(ncity==999)
+{
+ncity=0;
+printf("%d",ncity+1);
+cost+=ary[city][ncity];
+ 
+return;
 
