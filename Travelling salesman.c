@@ -61,8 +61,9 @@ if(ncity==999)
 ncity=0;
 printf("%d",ncity+1);
 cost+=ary[city][ncity];
-}
 return;
+}
+mincost(ncity);
 }
 int main()
 {
