@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<conio.h>
+
 int ary[10][10],completed[10],n,cost=0;
 void takeInput()
 {
@@ -6,27 +8,40 @@ void takeInput()
 
 	printf("Enter the number of cities: ");
 	scanf("%d",&n);
-
+    top:
 	printf("\nEnter the Cost Matrix\n");
-
 	for(i=0;i < n;i++)
 	{
 		printf("\nEnter The cost to travel from city %d to others\n",i+1);
-
 		for( j=0;j < n;j++)
+		{
 			scanf("%d",&ary[i][j]);
-
+		}
 		completed[i]=0;
+	}
+	for( i=0;i < n;i++)
+	{
+		for(j=0;j < n;j++)
+		{
+		   if( (i==j && ary[i][j]!=0) || (ary[i][j]!=ary[j][i]))
+			{
+				printf("worng Input\n\n");
+				getch();
+				goto top;
+			}	
+		}
+		
 	}
 
 	printf("\n\nThe cost matrix is:");
-
 	for( i=0;i < n;i++)
 	{
 		printf("\n");
-
 		for(j=0;j < n;j++)
-			printf("\t%d",ary[i][j]);
+		{
+		   printf("%d\t",ary[i][j]);
+		}
+		
 	}
 }
 int least(int c)
