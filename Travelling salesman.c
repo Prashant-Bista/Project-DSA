@@ -39,7 +39,7 @@ void takeInput()
 	{
 		printf("\tv%d",i+1);
 	}
-	printf("\n");
+	printf("\n\n");
 	for( i=0;i < n;i++)
 	{
 		printf("v%d\t",i+1);
