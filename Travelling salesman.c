@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 #include<conio.h>
 
@@ -33,14 +34,21 @@ void takeInput()
 		
 	}
 
-	printf("\n\nThe cost matrix is:");
+	printf("\n\nThe cost matrix is:\n");
+	for(int i=0;i<n;i++)
+	{
+		printf("\tv%d",i+1);
+	}
+	printf("\n");
 	for( i=0;i < n;i++)
 	{
-		printf("\n");
+		printf("v%d\t",i+1);
+		
 		for(j=0;j < n;j++)
 		{
 		   printf("%d\t",ary[i][j]);
 		}
+		printf("\n");
 		
 	}
 }
