@@ -35,9 +35,9 @@ void takeInput()
 	}
 
 	printf("\n\nThe cost matrix is:\n");
-	for(int i=0;i<n;i++)
+	for(i=0;i<n;i++)
 	{
-		printf("v%d",i+1);
+		printf("\tv%d",i+1);
 	}
 	printf("\n");
 	for( i=0;i < n;i++)
