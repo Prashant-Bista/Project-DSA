@@ -37,9 +37,9 @@ void takeInput()
 	printf("\n\nThe cost matrix is:\n");
 	for(int i=0;i<n;i++)
 	{
-		printf("\tv%d",i+1);
+		printf("v%d",i+1);
 	}
-	printf("\n\n");
+	printf("\n");
 	for( i=0;i < n;i++)
 	{
 		printf("v%d\t",i+1);
@@ -59,15 +59,15 @@ int least(int c)
 	for (i=0;i<n;i++)
 	{
 		if((ary[c][i]!=0)&&(completed[i]==0))
-		if(ary[c][i]+ary[i][c]<min)
+		if(ary[i][c]<min)
 		{
-			min=ary[i][0]+ary[c][i];
-			kmin=ary[c][i];
+			
+			min=ary[c][i];
 			nc=i;
 		}
 	}
 	if(min!=999)
-	cost+=kmin;
+	cost+=min;
 	return nc;
 }
 void mincost(int city)
